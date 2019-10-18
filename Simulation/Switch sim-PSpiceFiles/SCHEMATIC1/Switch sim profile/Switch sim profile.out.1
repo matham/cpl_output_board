@@ -1,0 +1,188 @@
+
+**** 01/14/13 20:56:36 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Switch sim profile"  [ C:\USERS\MATTHEW EINHORN\DESKTOP\CPL ADC BOARD\Boutput board\Simulation\switch sim-ps
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Switch sim profile.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+.INC "C:\USERS\MATTHEW EINHORN\DESKTOP\CPL ADC BOARD\Boutput board\Simulation\switch sim-pspicefiles\schematic1\Switch sim profile\"
++ "Switch sim profile_profile.inc" 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\Matthew Einhorn\Documents\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+
+**** INCLUDING "Switch sim profile_profile.inc" ****
+.LIB    ".\psmn012-100ys.lib" 
+
+**** RESUMING "Switch sim profile.cir" ****
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 3.0001 2 SKIPBP 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source SWITCH SIM
+X_U1         N01869 N000691 0 PSMN012-100YS 
+V_V1         N00255 0 50Vdc
+R_R1         N01873 N00255  500  
+R_R2         N000691 N002050  1000  
+V_V2         N002050 0  
++PULSE 0 5 0 1n 1n .75 1
+X_U2         N01873 N016961 N01869 PSMN012-100YS 
+V_V3         N01916 N01869  
++PULSE 0 5 .25 1n 1n .25 1
+R_R3         N01869 N01873  1k  
+R_R4         N016961 N01916  1000  
+
+**** RESUMING "Switch sim profile.cir" ****
+.END
+
+**** 01/14/13 20:56:36 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Switch sim profile"  [ C:\USERS\MATTHEW EINHORN\DESKTOP\CPL ADC BOARD\Boutput board\Simulation\switch sim-ps
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.DBD        X_U2.DBD        
+          IS    2.102193E-12    2.102193E-12 
+          BV  110             110            
+         IBV  250.000000E-06  250.000000E-06 
+          RS    1.000000E-06    1.000000E-06 
+          TT   56.000000E-09   56.000000E-09 
+         CJO    1.278000E-09    1.278000E-09 
+          VJ     .75             .75         
+           M     .63             .63         
+
+
+**** 01/14/13 20:56:36 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Switch sim profile"  [ C:\USERS\MATTHEW EINHORN\DESKTOP\CPL ADC BOARD\Boutput board\Simulation\switch sim-ps
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.MINT       X_U2.MINT       
+               NMOS            NMOS            
+       LEVEL    3               3            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+         VTO    3.65            3.65         
+          KP  170             170            
+       GAMMA    0               0            
+         PHI     .6              .6          
+      LAMBDA    0               0            
+          IS    1.000000E-24    1.000000E-24 
+          JS    0               0            
+          PB     .8              .8          
+        PBSW     .8              .8          
+          CJ    0               0            
+        CJSW    0               0            
+        CGSO    0               0            
+        CGDO    0               0            
+        CGBO    0               0            
+         NFS  660.000000E+09  660.000000E+09 
+         TOX  100.000000E-09  100.000000E-09 
+          XJ    0               0            
+       UCRIT   10.000000E+03   10.000000E+03 
+        VMAX  900             900            
+         ETA    1.000000E+03    1.000000E+03 
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0  600             600            
+        TEMP    0               0            
+         VDD    5               5            
+       XPART    0               0            
+
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+
+ERROR(ORPSIM-15138): Convergence problem in transient analysis at Time =  .75 .
+         Time step =  57.60E-21, minimum allowable step size =  1.000E-18
+
+  These voltages failed to converge:
+
+    V(N000691)                =    1.178mV  \    1.038mV
+    V(X_U1.1)                 =    1.179mV  \    1.038mV
+    V(X_U1.8)                 =   141.16uV  \    19.96nV
+    V(X_U1.7)                 =   141.18uV  \    19.67nV
+    V(X_U1.6)                 =   141.18uV  \    19.58nV
+    V(X_U1.2)                 =    1.180mV  \    1.038mV
+
+  These supply currents failed to converge:
+
+    I(X_U1.E11)               =   -44.70nA  \   -1.006nA
+    I(X_U2.E11)               =   -15.42nA  \    1.605nA
+    I(V_V1)                   =   392.37nA  \  -171.69nA
+    I(V_V2)                   =    1.178uA  \    1.038uA
+    I(V_V3)                   =   -4.770uA  \   -4.910uA
+    I(X_U1.V11)               =    44.70nA  \    1.006nA
+    I(X_U2.V11)               =    15.42nA  \   -1.605nA
+
+  These devices failed to converge:
+    X_U1.DBD  
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00255)   50.0000 (N01869)   49.9980 (N01873)   50.0000 (N01916)   49.9980     
+
+(X_U1.1)     .0012 (X_U1.2)     .0012 (X_U1.3)   49.9980 (X_U1.4)   49.9980     
+
+(X_U1.5)   49.9980 (X_U1.6) 141.2E-06 (X_U1.7) 141.2E-06 (X_U1.8) 141.2E-06     
+
+(X_U1.9)   49.9980 (X_U2.1)   49.9930 (X_U2.2)   49.9930 (X_U2.3)   50.0000     
+
+(X_U2.4)   50.0000 (X_U2.5)   50.0000 (X_U2.6)   49.9980 (X_U2.7)   49.9980     
+
+(X_U2.8)   49.9980 (X_U2.9)   50.0000 (N000691)     .0012                       
+
+(N002050)    0.0000                   (N016961)   49.9930                       
+
+(X_U1.11)    0.0000                   (X_U1.12)   49.9960                       
+
+(X_U1.13)  148.0100                   (X_U2.11)    0.0000                       
+
+(X_U2.12)     .0074                   (X_U2.13) 1103.0000                   
+
+
+**** Interrupt ****

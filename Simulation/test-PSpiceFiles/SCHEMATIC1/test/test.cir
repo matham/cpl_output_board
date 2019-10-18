@@ -1,0 +1,20 @@
+** Profile: "SCHEMATIC1-test"  [ C:\USERS\MATTHEW EINHORN\DESKTOP\CPL ADC BOARD\Boutput board\Simulation\test-PSpiceFiles\SCHEMATIC1\test.sim ] 
+
+** Creating circuit file "test.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+.INC "C:\USERS\MATTHEW EINHORN\DESKTOP\CPL ADC BOARD\Boutput board\Simulation\test-PSpiceFiles\SCHEMATIC1\test\test_profile.inc" 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\Matthew Einhorn\Documents\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.AC DEC 1000 0.01 10Meg
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

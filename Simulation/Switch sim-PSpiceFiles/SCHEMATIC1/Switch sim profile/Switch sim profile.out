@@ -1,0 +1,197 @@
+
+**** 01/14/13 21:02:41 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Switch sim profile"  [ C:\USERS\MATTHEW EINHORN\DESKTOP\CPL ADC BOARD\Boutput board\Simulation\switch sim-ps
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Switch sim profile.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+.INC "C:\USERS\MATTHEW EINHORN\DESKTOP\CPL ADC BOARD\Boutput board\Simulation\switch sim-pspicefiles\schematic1\Switch sim profile\"
++ "Switch sim profile_profile.inc" 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\Matthew Einhorn\Documents\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+
+**** INCLUDING "Switch sim profile_profile.inc" ****
+.LIB    ".\psmn012-100ys.lib" 
+
+**** RESUMING "Switch sim profile.cir" ****
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 3.0001 2 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source SWITCH SIM
+X_U1         N000690 N000691 0 PSMN012-100YS 
+V_V1         N00255 0 50Vdc
+R_R1         N001191 N00255  500  
+R_R2         N000691 N002050  1000  
+V_V2         N002050 0  
++PULSE 0 5 0 1n 1n .75 1
+X_U2         N001191 N016961 N000690 PSMN012-100YS 
+V_V3         N01916 N02296  
++PULSE 0 5 .25 1n 1n .25 1
+R_R4         N016961 N01916  1000  
+
+**** RESUMING "Switch sim profile.cir" ****
+.END
+
+**** 01/14/13 21:02:41 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Switch sim profile"  [ C:\USERS\MATTHEW EINHORN\DESKTOP\CPL ADC BOARD\Boutput board\Simulation\switch sim-ps
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.DBD        X_U2.DBD        
+          IS    2.102193E-12    2.102193E-12 
+          BV  110             110            
+         IBV  250.000000E-06  250.000000E-06 
+          RS    1.000000E-06    1.000000E-06 
+          TT   56.000000E-09   56.000000E-09 
+         CJO    1.278000E-09    1.278000E-09 
+          VJ     .75             .75         
+           M     .63             .63         
+
+
+**** 01/14/13 21:02:41 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Switch sim profile"  [ C:\USERS\MATTHEW EINHORN\DESKTOP\CPL ADC BOARD\Boutput board\Simulation\switch sim-ps
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.MINT       X_U2.MINT       
+               NMOS            NMOS            
+       LEVEL    3               3            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+         VTO    3.65            3.65         
+          KP  170             170            
+       GAMMA    0               0            
+         PHI     .6              .6          
+      LAMBDA    0               0            
+          IS    1.000000E-24    1.000000E-24 
+          JS    0               0            
+          PB     .8              .8          
+        PBSW     .8              .8          
+          CJ    0               0            
+        CJSW    0               0            
+        CGSO    0               0            
+        CGDO    0               0            
+        CGBO    0               0            
+         NFS  660.000000E+09  660.000000E+09 
+         TOX  100.000000E-09  100.000000E-09 
+          XJ    0               0            
+       UCRIT   10.000000E+03   10.000000E+03 
+        VMAX  900             900            
+         ETA    1.000000E+03    1.000000E+03 
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0  600             600            
+        TEMP    0               0            
+         VDD    5               5            
+       XPART    0               0            
+
+
+**** 01/14/13 21:02:41 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Switch sim profile"  [ C:\USERS\MATTHEW EINHORN\DESKTOP\CPL ADC BOARD\Boutput board\Simulation\switch sim-ps
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00255)   50.0000 (N01916)   24.7760 (N02296)   24.7760 (X_U1.1) 24.77E-09     
+
+(X_U1.2) 24.79E-09 (X_U1.3)   24.7700 (X_U1.4)   24.7700 (X_U1.5)   24.7700     
+
+(X_U1.6) 5.222E-12 (X_U1.7) 5.220E-12 (X_U1.8) 158.3E-27 (X_U1.9)   24.7700     
+
+(X_U2.1)   24.7760 (X_U2.2)   24.7760 (X_U2.3)   50.0000 (X_U2.4)   50.0000     
+
+(X_U2.5)   50.0000 (X_U2.6)   24.7700 (X_U2.7)   24.7700 (X_U2.8)   24.7700     
+
+(X_U2.9)   50.0000 (N000690)   24.7700                   (N000691) 24.77E-09    
+
+(N001191)   50.0000                   (N002050)    0.0000                       
+
+(N016961)   24.7760                   (X_U1.11)    0.0000                       
+
+(X_U1.12)   24.7700                   (X_U1.13)  197.8900                       
+
+(X_U2.11)    0.0000                   (X_U2.12)   25.2240                       
+
+(X_U2.13)  196.5600                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -1.685E-08
+    V_V2         2.477E-11
+    V_V3         0.000E+00
+    X_U1.V11     0.000E+00
+    X_U2.V11     0.000E+00
+
+    TOTAL POWER DISSIPATION   8.43E-07  WATTS
+
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+
+          JOB ABORTED
+
+**** 01/14/13 21:02:41 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Switch sim profile"  [ C:\USERS\MATTHEW EINHORN\DESKTOP\CPL ADC BOARD\Boutput board\Simulation\switch sim-ps
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        4.99
+

@@ -1,0 +1,80 @@
+(ExpressProject "Switch sim"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File ".\switch sim.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Outputs"
+    (File ".\switch sim-pspicefiles\schematic1\schematic1.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (ActiveProfile
+         ".\switch sim-pspicefiles\schematic1\switch sim profile.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\switch sim-pspicefiles\schematic1\switch sim profile.sim"
+        (DisplayName "SCHEMATIC1-Switch sim profile")
+        (Type "PSpice Profile")))
+    (Folder "Model Libraries"
+      (Sort User))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (PartMRUSelector
+    (VPULSE
+      (FullPartName "VPULSE.Normal")
+      (LibraryName "C:\ORCAD_16.6_LITE\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (0
+      (LibraryName "C:\ORCAD_16.6_LITE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName "C:\ORCAD_16.6_LITE\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (VDC
+      (FullPartName "VDC.Normal")
+      (LibraryName "C:\ORCAD_16.6_LITE\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (PSMN012-100YS
+      (FullPartName "PSMN012-100YS.Normal")
+      (LibraryName
+         "C:\USERS\MATTHEW EINHORN\DESKTOP\CPL ADC BOARD\BOUTPUT BOARD\SIMULATION\PSMN012-100YS.OLB")
+      (DeviceIndex "0"))
+    (M2SK1143
+      (FullPartName "M2SK1143.Normal")
+      (LibraryName
+         "C:\ORCAD_16.6_LITE\TOOLS\CAPTURE\LIBRARY\PSPICE\JPWRMOS.OLB")
+      (DeviceIndex "0")))
+  (LastUsedLibraryBrowseDirectory
+     "C:\Users\Matthew Einhorn\Desktop\CPL ADC Board\Boutput board\Simulation")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Outputs")
+      (Select "Design Resources"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -30 0 200 0 301"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 50 1264 50 389")
+        (Scroll "381 22")
+        (Zoom "200")
+        (Occurrence "/"))
+      (Path
+         "C:\USERS\MATTHEW EINHORN\DESKTOP\CPL ADC BOARD\BOUTPUT BOARD\SIMULATION\SWITCH SIM.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE1")))
+  (MPSSessionName "Matthew Einhorn"))

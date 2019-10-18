@@ -1,0 +1,203 @@
+
+**** 01/24/13 22:56:18 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-test"  [ C:\USERS\MATTHEW EINHORN\DESKTOP\CPL ADC BOARD\Boutput board\Simulation\test-PSpiceFiles\SCHEMATIC1
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "test.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+.INC "C:\USERS\MATTHEW EINHORN\DESKTOP\CPL ADC BOARD\Boutput board\Simulation\test-PSpiceFiles\SCHEMATIC1\test\test_profile.inc" 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\Matthew Einhorn\Documents\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+
+**** INCLUDING test_profile.inc ****
+.LIB    ".\opamp.lib" 
+
+**** RESUMING test.cir ****
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.AC DEC 1000 0.01 10Meg
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source TEST
+V_V1         N00146 0 5Vdc
+V_V2         N00116 0 -5Vdc
+V_V3         N00334 0 DC 1Vdc AC .5Vac 
+R_R1         N00247 N00208  15k  
+R_R2         0 N00247  49k  
+C_C1         N00334 N00366  4.7u  
+C_C2         N00366 N00370  4.7u  
+R_R3         0 N00366  2.94k  
+R_R4         N00208 N00366  11.3k  
+X_U2A         N00370 N00247 N00146 N00116 N00208 0 HA-5154
+
+**** RESUMING test.cir ****
+.END
+
+**** 01/24/13 22:56:18 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-test"  [ C:\USERS\MATTHEW EINHORN\DESKTOP\CPL ADC BOARD\Boutput board\Simulation\test-PSpiceFiles\SCHEMATIC1
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U2A.HA5154DA  X_U2A.HA5154DC  X_U2A.HA5154DB  
+          IS   19.020000E-30  908.770000E-12  800.000000E-18 
+         IKF   99.999000E+12   99.999000E+12   99.999000E+12 
+          BV   99.999000E+12   99.999000E+12   99.999000E+12 
+
+
+**** 01/24/13 22:56:18 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-test"  [ C:\USERS\MATTHEW EINHORN\DESKTOP\CPL ADC BOARD\Boutput board\Simulation\test-PSpiceFiles\SCHEMATIC1
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U2A.HA5154QA  X_U2A.HA5154QB  
+               NPN             NPN             
+       LEVEL    1               1            
+          IS  787.900000E-18  800.000000E-18 
+          BF  500             500            
+          NF    1               1            
+         VAF   99.999000E+12   99.999000E+12 
+         IKF   99.999000E+12   99.999000E+12 
+          BR    1               1            
+          NR    1               1            
+         VAR   99.999000E+12   99.999000E+12 
+         IKR   99.999000E+12   99.999000E+12 
+         ISS    0               0            
+         IRB   99.999000E+12   99.999000E+12 
+          RE    0               0            
+          RC    0               0            
+         CJE    0               0            
+         VJE     .75             .75         
+         CJC    0               0            
+         VJC     .75             .75         
+         MJC     .33             .33         
+        XCJC    1               1            
+         CJS    0               0            
+         VJS     .75             .75         
+         VTF   99.999000E+12   99.999000E+12 
+          KF    0               0            
+          AF    1               1            
+          CN    2.42            2.42         
+           D     .87             .87         
+
+
+**** 01/24/13 22:56:18 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-test"  [ C:\USERS\MATTHEW EINHORN\DESKTOP\CPL ADC BOARD\Boutput board\Simulation\test-PSpiceFiles\SCHEMATIC1
+
+
+ ****     Current Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U2A.CL1       
+         RON     .1          
+        ROFF   50.000000E+06 
+         ION  500.000000E-09 
+        IOFF    1.000000E-09 
+
+
+INTERNAL ERROR -- Divide by Zero, Divide
+
+ABORTING SIMULATION
+**** 01/24/13 22:56:18 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-test"  [ C:\USERS\MATTHEW EINHORN\DESKTOP\CPL ADC BOARD\Boutput board\Simulation\test-PSpiceFiles\SCHEMATIC1
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+Node counts:
+  Top level (NUNODS)                =           8
+  External (NCNODS)                 =          34
+  Total (NUMNOD)                    =          34
+
+Total device count (NUMEL)          =          69
+  Capacitors (C)                    =           5
+  Diodes (D)                        =           6
+  VCVS (E)                          =           5
+  CCCS (F)                          =           2
+  VCCS (G)                          =          10
+  Current Sources (I)               =           2
+  Inductors (L)                     =           4
+  BJTs (Q)                          =           2
+  Resistors (R)                     =          21
+  Voltage Sources (V)               =           6
+  ISwitches (W)                     =           2
+
+Number of subcircuits (X)           =           1
+
+Matrix statistics:
+  Matrix size (NSTOP)               =          49
+  Initial no. elements (NTTAR)      =         156
+  No. elements w/ fillin (NTTBR)    =         237
+  No. fillins (IFILL)               =          81
+  No. overflows (NTTOV)             =         153
+  No. LU operations (IOPS)          =         253
+  Percent sparsity (PERSPA)         =      90.129
+
+Analysis statistics:
+  No. total time points (NUMTTP)    =           0
+  No. rejected time points (NUMRTP) =           0
+  No. iterations (NUMNIT)           =           0
+
+Load Threads                        =           1
+
+Runtime statistics:                       Seconds      Iterations   Stopped At
+  Matrix load                       =         .03
+  Matrix solution                   =         .02               3
+  Readin                            =         .02
+  General setup                     =        0.00
+  Setup                             =        0.00
+  DC sweep                          =        0.00               0
+  Bias point                        =        0.00               0
+  Default algorithm                 =        -.03           -1274
+  GMIN stepping                     =         .03            1274      1.433m
+  AC and noise                      =        0.00               0
+  Total transient analysis          =        0.00
+  Output                            =        0.00
+  Overhead                          =        0.00
+  Total job time (using Solver 1)   =         .12
+
